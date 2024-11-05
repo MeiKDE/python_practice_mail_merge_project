@@ -10,7 +10,7 @@
 PLACEHOLDER = "[name]"
 
 with open(
-    "/Users/mei/projects/python_practice_mail_merge_project/Input/Names/invited_names.txt",
+    "python_practice_mail_merge_project/Input/Names/invited_names.txt",
     mode="r",
 ) as names_file:
     names = names_file.readlines()  # turn names into list
@@ -18,7 +18,7 @@ with open(
 
 # Step 1 : open starting_letter.txt
 with open(
-    "/Users/mei/projects/python_practice_mail_merge_project/Input/Letters/starting_letter.txt",
+    "python_practice_mail_merge_project/Input/Letters/starting_letter.txt",
     mode="r",
 ) as letter_file:
     letter_content = letter_file.read()
@@ -29,7 +29,7 @@ with open(
 
         # Step 3: write letter into a new file(s)
         with open(
-            f"/Users/mei/projects/python_practice_mail_merge_project/Output/ReadyToSend/letter_for_{stripped_name}.txt",
+            f"python_practice_mail_merge_project/Output/ReadyToSend/letter_for_{stripped_name}.txt",
             mode="w",
         ) as completed_letter:
             completed_letter.write(new_letter)
